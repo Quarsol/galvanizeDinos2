@@ -30,6 +30,7 @@ class Profiles extends React.Component {
           <h2>Profiles</h2>
           <ul id="profiles">{this.props.dinos.map(dino => {
             return(
+              <li>
               <div className="profile-card" key={dino.name}>
               <header className="profile-header" key={dino.name}>
                 <img src={dino.image} alt="dinoProfile" />
@@ -37,6 +38,7 @@ class Profiles extends React.Component {
               </header>
               <SkillList skills={dino.skills} toggleClass={this.toggleClass}/>
             </div>
+          </li>
             )
           })}</ul>
       </section>
